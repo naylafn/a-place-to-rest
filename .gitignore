@@ -1,0 +1,37 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot-specific ignores
+.import/
+.export/
+.export_presets.cfg
+
+# Godot cache & temp files
+*.tmp
+*.log
+
+# Mono / C# (kalau pakai)
+.mono/
+data_*/
+mono_crash.*
+
+# Build / export output
+bin/
+build/
+export/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.bak
+
+# Godot editor-specific
+godot_editor_settings.tres
