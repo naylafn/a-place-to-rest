@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://302bud7y51s8"]
+
+[ext_resource type="Texture2D" uid="uid://dyqie0e5oy0sf" path="res://assets/Pixel Crawler - Free Pack/Cropped/Wall1.png" id="1_saksl"]
+[ext_resource type="Texture2D" uid="uid://c30b0mx1m085h" path="res://assets/Pixel Crawler - Free Pack/Cropped/Wall1-2.png" id="2_y6d0g"]
+[ext_resource type="Texture2D" uid="uid://bhftowy6oq8me" path="res://assets/Pixel Crawler - Free Pack/Cropped/Wall2.png" id="3_d3dn4"]
+[ext_resource type="Texture2D" uid="uid://ct3gi6nqte1v0" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Furniture.png" id="4_cwq4w"]
+[ext_resource type="Texture2D" uid="uid://tpy7m6scb574" path="res://assets/Pixel Crawler - Free Pack/Cropped/Roof2.png" id="5_ycekc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saksl"]
+size = Vector2(144, 51)
+
+[node name="House" type="StaticBody2D" unique_id=1662600301]
+
+[node name="Wall" type="Sprite2D" parent="." unique_id=1977462226]
+position = Vector2(392, 329)
+texture = ExtResource("1_saksl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall" unique_id=1853993915]
+position = Vector2(40, 0)
+texture = ExtResource("2_y6d0g")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall" unique_id=1503527563]
+position = Vector2(80, 0)
+texture = ExtResource("1_saksl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Wall" unique_id=363575090]
+position = Vector2(0, -47)
+texture = ExtResource("3_d3dn4")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Wall" unique_id=2037885406]
+position = Vector2(80, -47)
+texture = ExtResource("3_d3dn4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Wall" unique_id=694072359]
+position = Vector2(44, -47)
+texture = ExtResource("3_d3dn4")
+
+[node name="Door" type="Sprite2D" parent="." unique_id=1563986674]
+position = Vector2(469, 335)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_cwq4w")
+region_enabled = true
+region_rect = Rect2(133.36044, 284.99295, 20.743713, 35.372223)
+
+[node name="Window" type="Sprite2D" parent="." unique_id=1849831890]
+position = Vector2(406, 327)
+texture = ExtResource("4_cwq4w")
+region_enabled = true
+region_rect = Rect2(36.949352, 352.13113, 22.024082, 32.23816)
+
+[node name="Roof" type="Sprite2D" parent="." unique_id=2033921577]
+z_index = 1000
+position = Vector2(433.00003, 275)
+scale = Vector2(1.25, 1.2)
+texture = ExtResource("5_ycekc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=732886089]
+position = Vector2(432, 294.5)
+shape = SubResource("RectangleShape2D_saksl")
