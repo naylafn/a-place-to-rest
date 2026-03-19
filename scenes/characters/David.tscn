@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c02yhjggrjxvb"]
 
-[ext_resource type="Script" uid="uid://cs12s0xehsn36" path="res://scenes/characters/Silas.gd" id="1_53occ"]
+[ext_resource type="Script" uid="uid://cs12s0xehsn36" path="res://scenes/characters/David.gd" id="1_53occ"]
 [ext_resource type="Texture2D" uid="uid://c5wh3vl1hynvf" path="res://assets/Character/David/idle/Idle_Down-Sheet.png" id="2_bm8ex"]
 [ext_resource type="Texture2D" uid="uid://x8gao4os58yj" path="res://assets/Character/David/walk/Walk_Down-Sheet.png" id="2_se01g"]
 [ext_resource type="Texture2D" uid="uid://b3d2tnnwikkce" path="res://assets/Character/David/idle/Idle_Side-Sheet.png" id="3_45vv0"]

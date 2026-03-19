@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnc1fqhv8nbni"]
 
 [ext_resource type="PackedScene" uid="uid://302bud7y51s8" path="res://scenes/buildings/House.tscn" id="1_6xw50"]
-[ext_resource type="PackedScene" uid="uid://c02yhjggrjxvb" path="res://scenes/characters/Silas.tscn" id="2_t2phd"]
+[ext_resource type="PackedScene" uid="uid://c02yhjggrjxvb" path="res://scenes/characters/David.tscn" id="2_t2phd"]
 [ext_resource type="PackedScene" uid="uid://d0wihfgsvkw1s" path="res://scenes/props/Grass.tscn" id="3_n86dr"]
 
 [node name="Farm" type="Node2D" unique_id=569893186]
