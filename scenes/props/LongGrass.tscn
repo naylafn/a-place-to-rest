@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d0wihfgsvkw1s"]
+
+[ext_resource type="Script" uid="uid://bh3d5vrk3cqf4" path="res://scenes/props/LongGrass.gd" id="1_em0ws"]
+[ext_resource type="Texture2D" uid="uid://cemyxdistokrk" path="res://assets/Props/ShortGrass.png" id="2_wfa8s"]
+[ext_resource type="Texture2D" uid="uid://dg6qobpmba6yo" path="res://assets/Props/LongGrass.png" id="3_wkrdq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lro2u"]
+size = Vector2(24, 22)
+
+[node name="LongGrass" type="Area2D" unique_id=678828630]
+script = ExtResource("1_em0ws")
+stage_0 = ExtResource("2_wfa8s")
+stage_1 = ExtResource("3_wkrdq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=953537145]
+texture = ExtResource("3_wkrdq")
+region_rect = Rect2(96.70838, 31.017214, 14.508614, 16.104551)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=460950700]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_lro2u")
