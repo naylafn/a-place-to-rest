@@ -2,12 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://302bud7y51s8" path="res://scenes/buildings/House.tscn" id="1_6xw50"]
 [ext_resource type="PackedScene" uid="uid://c02yhjggrjxvb" path="res://scenes/characters/David.tscn" id="2_t2phd"]
-[ext_resource type="PackedScene" uid="uid://d0wihfgsvkw1s" path="res://scenes/props/LongGrass.tscn" id="3_n86dr"]
+[ext_resource type="PackedScene" uid="uid://d0wihfgsvkw1s" path="res://scenes/props/long_grass/LongGrass.tscn" id="3_n86dr"]
 
 [node name="Farm" type="Node2D" unique_id=569893186]
 
 [node name="House" parent="." unique_id=440019334 instance=ExtResource("1_6xw50")]
 position = Vector2(108, -51)
+scale = Vector2(1.1, 1.1)
 
 [node name="Node2D" parent="." unique_id=1541216621 instance=ExtResource("2_t2phd")]
 position = Vector2(516, 351)
