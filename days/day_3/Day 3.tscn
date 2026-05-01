@@ -931,7 +931,7 @@ tile_set = SubResource("TileSet_7n4ba")
 position = Vector2(624, 265)
 
 [node name="Bonfire" type="Area2D" parent="." unique_id=1920145748]
-z_index = -1
+z_index = -2
 script = ExtResource("10_ggc33")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bonfire" unique_id=1008533269]
@@ -940,6 +940,7 @@ sprite_frames = SubResource("SpriteFrames_a3w4b")
 
 [node name="Fire" type="AnimatedSprite2D" parent="Bonfire" unique_id=353284071]
 visible = false
+z_index = 1
 position = Vector2(426, 358)
 sprite_frames = SubResource("SpriteFrames_x03r0")
 

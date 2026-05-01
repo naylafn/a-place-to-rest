@@ -5,6 +5,7 @@ extends Node2D
 @onready var end_label = $EndScreen/Label
 @onready var fade = $FadeTransition
 @onready var objective_label = $ObjectiveUI/Panel/VBoxContainer/ObjectiveLabel
+@onready var objective_ui = $ObjectiveUI
 
 func _ready():
 	GameState.is_outdoor = true
@@ -55,3 +56,6 @@ func _on_dialogic_timeline_ended():
 		return
 
 	player.set_can_move(true)
+	
+func hide_objective_ui():
+	objective_ui.visible = false

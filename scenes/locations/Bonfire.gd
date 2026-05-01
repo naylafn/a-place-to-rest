@@ -75,8 +75,12 @@ func _on_yippie_finished():
 	var spirit = current_scene.get_node("Spirits")
 	spirit.visible = true
 
-	Dialogic.timeline_ended.connect(_on_ending_dialog_finished, CONNECT_ONE_SHOT)
+	if current_scene.has_method("hide_objective_ui"):
+		current_scene.hide_objective_ui()
+
 	GameState.ending_started = true
+
+	Dialogic.timeline_ended.connect(_on_ending_dialog_finished, CONNECT_ONE_SHOT)
 	Dialogic.start(ending_dialog)
 
 func _on_no_doll_dialog_finished():
