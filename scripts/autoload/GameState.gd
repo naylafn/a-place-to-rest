@@ -1,4 +1,5 @@
 extends Node
+var is_outdoor := false
 
 var current_day := 1
 var day_1_objectives_done := false # FALSE

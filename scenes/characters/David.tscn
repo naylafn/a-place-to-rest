@@ -13,7 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://b5p1g7fvxa1ct" path="res://assets/Character/David/watering/Watering_Down-Sheet.png" id="11_b5b6p"]
 [ext_resource type="Texture2D" uid="uid://cr68duuitmpsc" path="res://assets/Character/David/watering/Watering_Side-Sheet.png" id="12_x6v7s"]
 [ext_resource type="Texture2D" uid="uid://l3ide6te1iwy" path="res://assets/Character/David/watering/Watering_Up-Sheet.png" id="13_xcxv5"]
-[ext_resource type="AudioStream" path="res://assets/audio/Watering.ogg" id="14_xcxv5"]
+[ext_resource type="AudioStream" uid="uid://cdusbfpmdymkc" path="res://assets/audio/Watering.ogg" id="14_xcxv5"]
+[ext_resource type="AudioStream" uid="uid://crww7ail848ji" path="res://assets/audio/ES_Footsteps, Human, Forest Footsteps, Soft, Walking - Epidemic Sound.ogg" id="15_yn1q3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ntx5"]
 atlas = ExtResource("2_bm8ex")
@@ -661,6 +662,10 @@ shape = SubResource("RectangleShape2D_70m6u")
 
 [node name="WaterSFX" type="AudioStreamPlayer2D" parent="." unique_id=1601121263]
 stream = ExtResource("14_xcxv5")
+
+[node name="OutdoorSFX" type="AudioStreamPlayer2D" parent="." unique_id=2020630955]
+stream = ExtResource("15_yn1q3")
+volume_db = 1.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_entered"]

@@ -7,6 +7,7 @@ extends Node2D
 @onready var objective_label = $ObjectiveUI/Panel/VBoxContainer/ObjectiveLabel
 
 func _ready():
+	GameState.is_outdoor = true
 	end_screen.visible = false
 
 	if SceneTransition.spawn_point_name != "":

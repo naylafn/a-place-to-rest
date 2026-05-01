@@ -864,7 +864,7 @@ sources/0 = SubResource("TileSetAtlasSource_l3xg1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j665"]
 size = Vector2(20, 789.5)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tijsm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8eq8"]
 texture = ExtResource("6_d8eq8")
 0:0/0 = 0
 1:0/0 = 0
@@ -877,7 +877,7 @@ texture = ExtResource("6_d8eq8")
 2:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_tijsm"]
-sources/0 = SubResource("TileSetAtlasSource_tijsm")
+sources/0 = SubResource("TileSetAtlasSource_d8eq8")
 
 [node name="Farm" type="Node2D" unique_id=569893186]
 script = ExtResource("1_e1spd")

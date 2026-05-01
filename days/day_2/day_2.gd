@@ -8,6 +8,7 @@ var total_wood := 0
 var cut_wood := 0
 
 func _ready():
+	GameState.is_outdoor = true
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 

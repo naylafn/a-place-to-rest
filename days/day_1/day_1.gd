@@ -15,6 +15,7 @@ var cut_grass := 0
 var after_letter_triggered := false
 
 func _ready():
+	GameState.is_outdoor = true
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 

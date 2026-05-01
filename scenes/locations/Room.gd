@@ -5,6 +5,7 @@ extends Node2D
 @onready var door = $Area2D
 
 func _ready():
+	GameState.is_outdoor = false
 	if not GameState.enter_house_dialog_played:
 		GameState.enter_house_dialog_played = true
 		play_enter_house_dialog()

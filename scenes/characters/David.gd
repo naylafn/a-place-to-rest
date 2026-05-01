@@ -8,6 +8,8 @@ extends CharacterBody2D
 @onready var interact_area = $InteractArea
 @onready var interact_shape = $InteractArea/CollisionShape2D
 @onready var water_sfx = $WaterSFX
+@onready var outdoor_sfx = $OutdoorSFX
+var step_timer := 0.0
 
 var last_direction: Vector2 = Vector2.DOWN
 var is_attacking: bool = false
@@ -44,6 +46,18 @@ func _physics_process(delta):
 		update_interact_area()
 
 	handle_animation(direction)
+	
+	if direction != Vector2.ZERO and GameState.is_outdoor:
+		step_timer += delta
+
+		if step_timer >= 0.4:
+			play_footstep()
+			step_timer = 0.0
+	else:
+		step_timer = 0.0
+
+		if outdoor_sfx.playing:
+			outdoor_sfx.stop()
 
 func _input(event):
 	if not can_move:
@@ -191,3 +205,8 @@ func play_watering_animation():
 			anim.play("watering_down")
 		else:
 			anim.play("watering_up")
+
+func play_footstep():
+	if outdoor_sfx:
+		outdoor_sfx.pitch_scale = randf_range(0.9, 1.1)
+		outdoor_sfx.play()
