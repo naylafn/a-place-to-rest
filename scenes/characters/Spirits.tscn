@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://8rnxordc3q1g"]
+
+[ext_resource type="Script" uid="uid://dbos7kg1s4d1c" path="res://scenes/characters/Spirits.gd" id="1_gmlqw"]
+[ext_resource type="Texture2D" uid="uid://cqh7qymjqexb1" path="res://assets/Character/Grandpa/Idle_Down-Sheet.png" id="1_hbov2"]
+[ext_resource type="Texture2D" uid="uid://blc3k6egt6g5t" path="res://assets/Pixel Crawler - Free Pack/Entities/Mobs/Orc Crew/Orc - Shaman/Idle/Idle-Sheet.png" id="1_v12g0"]
+[ext_resource type="Script" uid="uid://dflrh2qel1tty" path="res://scenes/locations/Grandpa.gd" id="2_u4i51"]
+[ext_resource type="Texture2D" uid="uid://dllvm61wib6c3" path="res://assets/Pixel Crawler - Free Pack/Entities/Mobs/Skeleton Crew/Skeleton - Rogue/Idle/Idle-Sheet.png" id="4_u4i51"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jhkw"]
+atlas = ExtResource("1_hbov2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42sdq"]
+atlas = ExtResource("1_hbov2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjvyp"]
+atlas = ExtResource("1_hbov2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ne17"]
+atlas = ExtResource("1_hbov2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmlqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jhkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42sdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjvyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ne17")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 2.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkond"]
+atlas = ExtResource("1_v12g0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbov2"]
+atlas = ExtResource("1_v12g0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4i51"]
+atlas = ExtResource("1_v12g0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmlqw"]
+atlas = ExtResource("1_v12g0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u5bou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkond")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbov2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4i51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmlqw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5bou"]
+atlas = ExtResource("4_u4i51")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vrcf"]
+atlas = ExtResource("4_u4i51")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljyfs"]
+atlas = ExtResource("4_u4i51")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0erg5"]
+atlas = ExtResource("4_u4i51")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3fhix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5bou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vrcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljyfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0erg5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Spirits" type="Node2D" unique_id=1290761302]
+script = ExtResource("1_gmlqw")
+
+[node name="Grandpa" type="AnimatedSprite2D" parent="." unique_id=1966636641]
+texture_filter = 3
+position = Vector2(83, -35)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_gmlqw")
+animation = &"idle_down"
+script = ExtResource("2_u4i51")
+
+[node name="Spirit1" type="AnimatedSprite2D" parent="." unique_id=1510521797]
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_u5bou")
+frame_progress = 0.28048244
+
+[node name="Spirit2" type="AnimatedSprite2D" parent="." unique_id=1689907125]
+position = Vector2(150.00002, 65.00001)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_u5bou")
+frame_progress = 0.4365911
+
+[node name="Skeleton1" type="AnimatedSprite2D" parent="." unique_id=1479489681]
+position = Vector2(37, 62.999996)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_3fhix")
+
+[node name="Skeleton2" type="AnimatedSprite2D" parent="." unique_id=118532045]
+position = Vector2(165, 1.9999981)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_3fhix")

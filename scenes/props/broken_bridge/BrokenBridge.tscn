@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://606d54mwnr32"]
+
+[ext_resource type="Script" uid="uid://mpr67tc5neks" path="res://scenes/props/broken_bridge/BrokenBridge.gd" id="1_j35ho"]
+[ext_resource type="Script" uid="uid://dhmbqknvyka7" path="res://scripts/InteractArea.gd" id="2_o5krp"]
+[ext_resource type="Texture2D" uid="uid://cttkbolnnffpq" path="res://assets/props/exclamation_clean.png" id="3_m6rhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6rhy"]
+size = Vector2(20, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iho2"]
+size = Vector2(50, 50)
+
+[node name="BrokenBridge" type="Node2D" unique_id=434556725]
+script = ExtResource("1_j35ho")
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=656993068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=719123079]
+shape = SubResource("RectangleShape2D_m6rhy")
+
+[node name="InteractiveArea" type="Area2D" parent="." unique_id=1222377404]
+script = ExtResource("2_o5krp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveArea" unique_id=749569776]
+shape = SubResource("RectangleShape2D_8iho2")
+
+[node name="ExclamationIcon" type="Sprite2D" parent="." unique_id=1697871698]
+position = Vector2(0, -35.000004)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("3_m6rhy")

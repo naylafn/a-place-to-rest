@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://btsdsgjspp0xp"]
+
+[ext_resource type="Script" uid="uid://bvej53wrxsnxt" path="res://scenes/props/crops/carrot/carrot.gd" id="1_ncmr5"]
+[ext_resource type="Texture2D" uid="uid://dinf6ccsg3ual" path="res://assets/props/crops/Carrot_New.png" id="2_qidw6"]
+[ext_resource type="Texture2D" uid="uid://ix52gpdsq4tv" path="res://assets/props/crops/Carrot_Grown.png" id="3_808yh"]
+[ext_resource type="Texture2D" uid="uid://cm46ngrerrvam" path="res://assets/props/crops/carrot_rotten.png" id="4_p3wc2"]
+[ext_resource type="Texture2D" uid="uid://b0dkjk7pf06tf" path="res://assets/props/crops/droplet_clean.png" id="4_v5cwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_808yh"]
+size = Vector2(10.5, 11)
+
+[node name="Carrot" type="Area2D" unique_id=1501238732 groups=["crops"]]
+z_index = -1
+texture_filter = 3
+script = ExtResource("1_ncmr5")
+new_texture = ExtResource("2_qidw6")
+grown_texture = ExtResource("3_808yh")
+rotten_texture = ExtResource("4_p3wc2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1135943216]
+texture_filter = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=519449437]
+texture_filter = 3
+position = Vector2(-0.25, 0.5)
+shape = SubResource("RectangleShape2D_808yh")
+
+[node name="WaterIcon" type="Sprite2D" parent="." unique_id=1009039235]
+texture_filter = 3
+position = Vector2(0, -15)
+scale = Vector2(0.03582746, 0.030193659)
+texture = ExtResource("4_v5cwp")

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bwveb706as6k5"]
+
+[ext_resource type="Script" uid="uid://c25frha3m11lc" path="res://scenes/props/letter/letter.gd" id="1_kxnvu"]
+[ext_resource type="Texture2D" uid="uid://c1267xm87c71y" path="res://assets/props/Letter.png" id="2_uydmd"]
+[ext_resource type="Texture2D" uid="uid://cttkbolnnffpq" path="res://assets/props/exclamation_clean.png" id="3_uydmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cehwt"]
+size = Vector2(10, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxnvu"]
+bg_color = Color(0.9647059, 0.93333334, 0.8901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[node name="Letter" type="Area2D" unique_id=189926002]
+z_index = -1
+script = ExtResource("1_kxnvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1266820025]
+texture_filter = 3
+texture = ExtResource("2_uydmd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2108312448]
+shape = SubResource("RectangleShape2D_cehwt")
+
+[node name="LetterUI" type="CanvasLayer" parent="." unique_id=1275375251]
+visible = false
+
+[node name="Panel" type="Panel" parent="LetterUI" unique_id=1674789186]
+texture_filter = 3
+offset_left = 337.0
+offset_top = 41.0
+offset_right = 828.0
+offset_bottom = 615.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kxnvu")
+
+[node name="MarginContainer" type="MarginContainer" parent="LetterUI/Panel" unique_id=1314769757]
+layout_mode = 0
+offset_right = 491.0
+offset_bottom = 574.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LetterUI/Panel/MarginContainer" unique_id=2098117716]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LetterUI/Panel/MarginContainer/ScrollContainer" unique_id=498514051]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 2
+
+[node name="ExclamationIcon" type="Sprite2D" parent="." unique_id=1486676424]
+texture_filter = 3
+position = Vector2(0, -10)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("3_uydmd")

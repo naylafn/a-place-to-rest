@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://boy6xjeo1buc2"]
+
+[ext_resource type="Script" uid="uid://c60sl1j0i1gae" path="res://scenes/props/doll/Doll.gd" id="1_3thu2"]
+[ext_resource type="Texture2D" uid="uid://biykxvmceh1c0" path="res://assets/interior/altar/doll.png" id="2_6mgpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_modgp"]
+size = Vector2(47, 45)
+
+[node name="Doll" type="Area2D" unique_id=392412252]
+z_index = -1
+texture_filter = 3
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_3thu2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=240893475]
+texture = ExtResource("2_6mgpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=677765420]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_modgp")

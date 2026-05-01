@@ -1,0 +1,11 @@
+join character left
+character: What is this place?
+join doll center
+character: A doll?
+character: How weird...
+character: There’s something tied to it...
+leave doll
+join key center
+character: What is this key for?
+character: I'm gonna keep these and ask grandpa later.
+leave key

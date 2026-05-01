@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xipo73orgvus"]
+
+[ext_resource type="PackedScene" uid="uid://cv1vhlvnb6yxi" path="res://scenes/props/wood/Wood.tscn" id="1_hs3dv"]
+
+[node name="WoodMap" type="Node2D" unique_id=1455208475]
+texture_filter = 3
+
+[node name="Wood" parent="." unique_id=1822930055 instance=ExtResource("1_hs3dv")]
+
+[node name="Wood2" parent="." unique_id=1451838940 instance=ExtResource("1_hs3dv")]
+position = Vector2(67, 53)
+
+[node name="Wood3" parent="." unique_id=1104855282 instance=ExtResource("1_hs3dv")]
+position = Vector2(-72, -90)
+
+[node name="Wood4" parent="." unique_id=2053101510 instance=ExtResource("1_hs3dv")]
+position = Vector2(91, -46)
+
+[node name="Wood5" parent="." unique_id=2116166813 instance=ExtResource("1_hs3dv")]
+position = Vector2(-84, 50)

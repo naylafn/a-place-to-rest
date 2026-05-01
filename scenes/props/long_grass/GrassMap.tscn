@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://wy0sefqxjcf6"]
+
+[ext_resource type="PackedScene" uid="uid://d0wihfgsvkw1s" path="res://scenes/props/long_grass/LongGrass.tscn" id="1_uifm5"]
+
+[node name="GrassMap" type="Node2D" unique_id=1474830054]
+
+[node name="LongGrass" parent="." unique_id=678828630 instance=ExtResource("1_uifm5")]
+
+[node name="LongGrass2" parent="." unique_id=1634421978 instance=ExtResource("1_uifm5")]
+position = Vector2(-32, -80)
+
+[node name="LongGrass3" parent="." unique_id=850843939 instance=ExtResource("1_uifm5")]
+z_index = -1
+texture_filter = 3
+position = Vector2(-96, 5)
+
+[node name="LongGrass4" parent="." unique_id=2030998633 instance=ExtResource("1_uifm5")]
+position = Vector2(65, 70)
+
+[node name="LongGrass5" parent="." unique_id=1355309617 instance=ExtResource("1_uifm5")]
+position = Vector2(67, -42)
+
+[node name="LongGrass6" parent="." unique_id=1395043016 instance=ExtResource("1_uifm5")]
+position = Vector2(-30, 90)
