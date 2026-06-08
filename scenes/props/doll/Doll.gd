@@ -2,13 +2,28 @@ extends Area2D
 
 @export var dialog_name: String = "doll_found"
 
+@onready var icon = $ExclamationIcon
+
 var picked := false
+var icon_start_y := 0.0
+var time := 0.0
+
+func _ready():
+	icon_start_y = icon.position.y
+
+func _process(delta):
+	if picked:
+		return
+
+	time += delta
+	icon.position.y = icon_start_y + sin(time * 4.0) * 3.0
 
 func interact():
 	if picked:
 		return
 
 	picked = true
+	icon.visible = false
 	GameState.doll_found = true
 
 	var secret_door = get_tree().get_first_node_in_group("secret_door")

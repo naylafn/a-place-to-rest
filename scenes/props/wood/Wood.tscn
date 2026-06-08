@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fbdsfu1mw5o5" path="res://scenes/props/wood/Wood.gd" id="1_k2wll"]
 [ext_resource type="Texture2D" uid="uid://dh7njfjs5ri2w" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Vegetation.png" id="4_yqimx"]
+[ext_resource type="Texture2D" uid="uid://cttkbolnnffpq" path="res://assets/props/exclamation_clean.png" id="5_48c0u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5kkcj"]
 atlas = ExtResource("4_yqimx")
@@ -31,3 +32,9 @@ region_rect = Rect2(194.40993, 96.55432, 39.32541, 47.807358)
 texture_filter = 3
 position = Vector2(0.5, 3)
 shape = SubResource("RectangleShape2D_ojqdj")
+
+[node name="ExclamationIcon" type="Sprite2D" parent="." unique_id=1829805642]
+texture_filter = 3
+position = Vector2(0, -22)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("5_48c0u")
