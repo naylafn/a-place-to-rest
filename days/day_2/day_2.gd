@@ -42,11 +42,13 @@ func _ready():
 		for grass in grasses:
 			grass.cut.connect(_on_grass_cut)
 
-	var woods = get_tree().get_nodes_in_group("source")
-	total_wood = woods.size()
+	var wood_map = get_node_or_null("WoodMap")
+	if wood_map:
+		var woods = wood_map.get_children()
+		total_wood = woods.size()
 
-	for wood in woods:
-		wood.cut.connect(_on_wood_cut)
+		for wood in woods:
+			wood.cut.connect(_on_wood_cut)
 
 	var broken_bridge = $BrokenBridge
 	broken_bridge.bridge_investigated.connect(_on_bridge_investigated)
