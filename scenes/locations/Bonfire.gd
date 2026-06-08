@@ -11,16 +11,24 @@ extends Area2D
 
 var has_burned_doll := false
 var dialog_playing := false
+var target_light_energy := 1.1
+var flicker_timer := 0.0
 
 func _ready():
 	bonfire_anim.play("default")
 	fire_anim.visible = false
 	light.enabled = false
+	light.energy = target_light_energy
 	spirit.visible = false
 
 func _process(delta):
 	if light.enabled:
-		light.energy = randf_range(1.0, 1.3)
+		flicker_timer -= delta
+		if flicker_timer <= 0.0:
+			flicker_timer = randf_range(0.08, 0.16)
+			target_light_energy = randf_range(1.05, 1.2)
+
+		light.energy = lerpf(light.energy, target_light_energy, delta * 6.0)
 
 func interact():
 	if dialog_playing or has_burned_doll:
@@ -53,6 +61,8 @@ func interact():
 	fire_anim.visible = true
 	fire_anim.play("default")
 	light.enabled = true
+	flicker_timer = 0.0
+	target_light_energy = 1.1
 
 	Dialogic.timeline_ended.connect(_on_yippie_finished, CONNECT_ONE_SHOT)
 	Dialogic.start(first_dialog)
