@@ -13,6 +13,7 @@ var is_cutting := false
 var is_cut := false
 
 func _ready():
+	sprite.region_enabled = false
 	sprite.texture = wood_texture
 
 func cut_grass():
@@ -26,6 +27,7 @@ func cut_grass():
 
 	if hit_count >= hits_needed:
 		is_cut = true
+		sprite.region_enabled = false
 		sprite.texture = stick_texture
 		cut.emit()
 
