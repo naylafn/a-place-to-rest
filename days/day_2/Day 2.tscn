@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://do0l2fkxntce4" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Bonfire/Fire_01-Sheet.png" id="17_bh7tv"]
 [ext_resource type="AudioStream" uid="uid://ccpopaq44rpps" path="res://assets/audio/ES_Flowers and Berries - Magnus Ludvigsson.ogg" id="18_pnkwx"]
 [ext_resource type="PackedScene" uid="uid://8rnxordc3q1g" path="res://scenes/characters/Spirits.tscn" id="19_bh7tv"]
+[ext_resource type="PackedScene" uid="uid://wy0sefqxjcf6" path="res://scenes/props/long_grass/GrassMap.tscn" id="19_ropux"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0k8h3"]
 radius = 6.25
@@ -1034,6 +1035,9 @@ position = Vector2(341, 343)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Blocker" unique_id=1810774048]
 position = Vector2(617, 670)
 shape = SubResource("RectangleShape2D_kkuf6")
+
+[node name="GrassMap" parent="." unique_id=1474830054 instance=ExtResource("19_ropux")]
+position = Vector2(243, 304)
 
 [connection signal="body_entered" from="Door" to="Door/Door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Door" to="Door/Door" method="_on_area_2d_body_exited"]
